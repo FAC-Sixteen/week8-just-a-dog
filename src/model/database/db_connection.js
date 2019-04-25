@@ -4,9 +4,9 @@ const {
 const url = require('url');
 require('env2')('./config.env');
 
-if (!process.env.DB_URL) throw new Error('Env DB_URL must be set');
+if (!process.env.DATABASE_URL) throw new Error('Env DATABASE_URL must be set');
 
-const params = url.parse(process.env.DB_URL);
+const params = url.parse(process.env.DATABASE_URL);
 const [username, password] = params.auth.split(':');
 
 const options = {
