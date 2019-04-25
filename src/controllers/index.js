@@ -11,14 +11,13 @@ router.get('/', (req, res) => {
 
 router.post('/submit', (req, res) => {
     console.log(req.body);
-    postData(req.body.name, req.body.date, req.body.description, req.body.keyword);
+    postData(req.body.name.toLowerCase(), req.body.date, req.body.description, req.body.keyword);
     res.redirect(`/${req.body.name}`)
 })
 
 router.get('/:user', (req, response) => {
   const username = req.url.split("/")[1];
-    // response.render('user')
-    getData(username, (err, res) => {
+    getData(username.toLowerCase(), (err, res) => {
       if (err) console.log(err);
       console.log(res.rows);
       // response.end(res.rows);
