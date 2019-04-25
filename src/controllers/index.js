@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
+
+const getData = require("./../model/queries/getData");
 const postData = require('../model/queries/postData');
 
 router.get('/', (req, res) => {
@@ -13,8 +15,15 @@ router.post('/submit', (req, res) => {
     res.redirect(`/${req.body.name}`)
 })
 
-router.get('/:user', (req, res) => {
-    res.render('user')
+router.get('/:user', (req, response) => {
+  const username = req.url.split("/")[1];
+    // response.render('user')
+    getData(username, (err, res) => {
+      if (err) console.log(err);
+      console.log(res.rows);
+      // response.end(res.rows);
+      response.render('user', { dreams: res.rows })
+    })
 })
 
 router.use((req, res) => {
