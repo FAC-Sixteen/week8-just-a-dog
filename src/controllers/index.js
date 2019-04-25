@@ -20,9 +20,16 @@ router.get('/:user', (req, response) => {
     // response.render('user')
     getData(username, (err, res) => {
       if (err) console.log(err);
-      console.log(res.rows);
-      // response.end(res.rows);
-      response.render('user', { dreams: res.rows })
+
+      if (res.rows.length == 0) {
+          console.log('hello')
+        response
+        .status(404)
+        .sendFile(path.join(__dirname, '..', '..', 'public', 'html', '404.html'))
+      } else {
+                response.render('user', { dreams: res.rows })
+            }
+
     })
 })
 
