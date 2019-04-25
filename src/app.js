@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const handlebars = require('express-handlebars');
-const controllers = require('./controllers/index')
+const controllers = require('./controllers/index');
+const bodyParser = require('body-parser');
 
 const helpers = require('./views/helpers/index');
 
@@ -20,9 +21,11 @@ handlebars({
 })
 );
 
-
+app.disable('x-powered-by');
 app.set('port', process.env.PORT || 3000);
 app.use(favicon(path.join(__dirname, '..', 'public', 'assets', 'favicon.ico')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(controllers);
 
