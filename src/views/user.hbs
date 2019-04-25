@@ -1,10 +1,9 @@
-<h2>
-    Your dream diary
+{{#each dreams}}
+   <h2>
+    {{capitalise name}}'s dream diary
 </h2>
 
-{{#each dreams}}
-{{!-- {{#if user === res.body.user}}  --}}
-{{!-- pseudocode to be replaced once we know what the response object looks like --}}
+
     <div>
         <ul>
         <li>Date: {{date}}</li>
@@ -12,9 +11,8 @@
         <li>Keyword: {{keyword}}</li>
         </ul>
     </div>
-{{!--
-{{/if}} --}}
+
 {{/each}}
 
 <a href="/">Enter a new dream</a>
-{{!-- try it out to see if it links to the home endpoint --}}
+
