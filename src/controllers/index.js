@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
 
 router.post('/submit', (req, res) => {
     console.log(req.body)
+    res.redirect(`/${req.body.name}`)
 })
 
 router.get('/:user', (req, res) => {
