@@ -1,0 +1,73 @@
+body {
+        margin: 0;
+        padding: 0;
+        /* background-color: powderblue; */
+        background-image: url("assets/sheep.svg");
+    font-family: 'Poiret One', cursive;
+    /* font-family: 'Kalam', cursive; */
+    /* font-family: 'PT Sans', sans-serif; */
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Kalam';
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    padding: 0;
+    text-align: center;
+    display: block;
+    font-size: 4rem;
+}
+
+.centre-items {
+
+    display: flex;
+align-items: center;
+justify-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+input {
+    
+    border: none;
+padding: 10px;
+    margin: 10px;
+}
+
+label {
+    font-size: 1.5rem;
+ 
+}
+
+button {
+    border: none;
+    background-color: bisque;
+    height: 40px;
+    width: 100px;
+}
+
+.container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .row {
+      width: auto;
+  }
+  
+  svg, use {
+    display: block;
+  }
+

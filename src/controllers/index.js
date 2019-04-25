@@ -15,14 +15,20 @@ router.post('/submit', (req, res) => {
     res.redirect(`/${req.body.name}`)
 })
 
+router.post('/search', (req, res) => {
+    console.log(req.body.search);
+   
+    res.redirect(`/${req.body.search}`)
+})
+
 router.get('/:user', (req, response) => {
   const username = req.url.split("/")[1];
-    // response.render('user')
+ 
     getData(username, (err, res) => {
       if (err) console.log(err);
 
       if (res.rows.length == 0) {
-          console.log('hello')
+          console.log('hello wave')
         response
         .status(404)
         .sendFile(path.join(__dirname, '..', '..', 'public', 'html', '404.html'))
