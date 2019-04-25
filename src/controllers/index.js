@@ -1,14 +1,17 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
+
 const getData = require("./../model/queries/getData");
+const postData = require('../model/queries/postData');
 
 router.get('/', (req, res) => {
     res.render('home')
 })
 
 router.post('/submit', (req, res) => {
-    console.log(req.body)
+    console.log(req.body);
+    postData(req.body.name, req.body.date, req.body.description, req.body.keyword);
     res.redirect(`/${req.body.name}`)
 })
 
