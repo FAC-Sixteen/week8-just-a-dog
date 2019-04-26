@@ -1,8 +1,8 @@
 body {
-        margin: 0;
-        padding: 0;
-        /* background-color: powderblue; */
-        background-image: url("assets/sheep.svg");
+    margin: 0;
+    padding: 0;
+    background-color: powderblue; 
+    /* background-image: url("assets/sheep.svg"); */
     font-family: 'Poiret One', cursive;
     /* font-family: 'Kalam', cursive; */
     /* font-family: 'PT Sans', sans-serif; */
@@ -20,24 +20,21 @@ h1 {
 }
 
 .centre-items {
-
     display: flex;
-align-items: center;
-justify-items: center;
+    align-items: center;
+    justify-items: center;
     flex-direction: column;
     text-align: center;
 }
 
 input {
-    
     border: none;
-padding: 10px;
+    padding: 10px;
     margin: 10px;
 }
 
 label {
     font-size: 1.5rem;
- 
 }
 
 button {
@@ -64,7 +61,7 @@ button {
   }
   
   .row {
-      width: auto;
+    width: auto;
   }
   
   svg, use {
