@@ -56,7 +56,7 @@ A dream journal app that lets user input their dream descriptions and view a log
 
 
 ### File Structure
-![](https://i.imgur.com/jTIHRLE.jpg)
+![](https://i.imgur.com/M4aG06L.jpg)
 
 
 ## 🗓Process
