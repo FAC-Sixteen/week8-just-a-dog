@@ -60,7 +60,6 @@ button, .dream_new_button {
     height: 50px;
     width: 100px;
     padding: 10px;
-    margin: 1em;
     padding-bottom: 20px;
     border-radius: 2px;
     font-family: 'Poiret One', cursive;
@@ -153,14 +152,24 @@ label {
 .diary_container {
     display: flex;
     flex-direction: column;
+    margin: 2em;
     width: 75%;
 }
-
+.diary_name {
+    margin: 0 2em;
+}
 .dream_container {
+    z-index: 3000;
     background-color: antiquewhite;
     width: 50%;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    border: solid 2px rgb(44, 148, 148);
 }
-
 .dream_list {
     list-style-type: none;
+    font-weight: bold;
+}
+.dream_new_button {
+    width: 200px;
 }

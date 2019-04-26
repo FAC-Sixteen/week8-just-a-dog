@@ -1,5 +1,5 @@
 {{#if dreams}}
-    <h2>
+    <h2 class="diary_name">
     {{capitalise dreams.0.name}}'s dream diary
     </h2>
 {{/if}}
@@ -7,7 +7,7 @@
 {{#each dreams}}
     <div class="dream_container">
         <ul class="dream_list">
-        <li>Date: {{date}}</li>
+        <li>Date: {{formatDate date}}</li>
         <li>Description: {{description}}</li>
         <li>Keyword: {{keyword}}</li>
         </ul>
