@@ -10,7 +10,7 @@ CREATE TABLE dreams (
     keyword TEXT NOT NULL 
 );
 
-INSERT INTO dreams (name, date, description, keyword) VALUES ('Christopher', '2008-07-08', '(dream(dream(dream(dream(dream(dream(dream(dream(dream(dream(dream(dream))))))))))))', 'inception'),
-('Martin', '1963-08-28', 'I have a dream.', 'freedom');
+INSERT INTO dreams (name, date, description, keyword) VALUES ('christopher', '2008-07-08', '(dream(dream(dream(dream(dream(dream(dream(dream(dream(dream(dream(dream))))))))))))', 'inception'),
+('martin', '1963-08-28', 'I have a dream.', 'freedom');
 
 COMMIT;

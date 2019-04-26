@@ -53,7 +53,7 @@ textarea:focus {
     border-color: rgb(215, 47, 47);
 }
 
-button {
+button, .dream_new_button {
     z-index: 2;
     border: solid 2px rgb(44, 148, 148);
     background-color: bisque;
@@ -73,7 +73,8 @@ button {
     transition: all 0.3s ease-in-out;
 
 }
-
+.dream_new_button:hover,
+.dream_new_button:focus,
 button:hover,
 button:focus {
     background-color: rgb(44, 148, 148);
@@ -117,7 +118,8 @@ label {
     color: black;
 }
 
-.main-form {
+.main-form,
+.diary_container {
     z-index: 1;
     border-radius: 3px;
     padding: 30px;
@@ -143,4 +145,31 @@ label {
     font-size: 1.5em;
     text-shadow: 2px 2px 2px black;
     margin-top: 0.5em;
+}
+
+
+/* user page */
+.diary_container {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    width: 75%;
+}
+.diary_name {
+    margin: 0 2em;
+}
+.dream_container {
+    z-index: 3000;
+    background-color: antiquewhite;
+    width: 50%;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    border: solid 2px rgb(44, 148, 148);
+}
+.dream_list {
+    list-style-type: none;
+    font-weight: bold;
+}
+.dream_new_button {
+    width: 200px;
 }
