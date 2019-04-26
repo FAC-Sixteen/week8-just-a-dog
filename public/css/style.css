@@ -1,12 +1,15 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: powderblue; 
-    /* background-image: url("assets/sheep.svg"); */
-    font-family: 'Poiret One', cursive;
-    /* font-family: 'Kalam', cursive; */
-    /* font-family: 'PT Sans', sans-serif; */
-    height: 100vh;
+
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-family: 'Poiret One', cursive;
+        /* background-color: powderblue; */
+        background-image: url("./../assets/sheep.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
 }
 
 h1 {
@@ -14,9 +17,22 @@ h1 {
     font-weight: 100;
     letter-spacing: 0.1em;
     padding: 0;
+    margin: 0;
+    margin-top: 5px;
     text-align: center;
     display: block;
     font-size: 4rem;
+    color: bisque;
+   
+}
+
+h2 {
+    color: bisque;
+    margin: 0;
+    margin-top: -10px;
+    margin-bottom: 20px;
+
+    letter-spacing: 0.1em;
 }
 
 .centre-items {
@@ -25,39 +41,58 @@ h1 {
     justify-items: center;
     flex-direction: column;
     text-align: center;
-}
+} 
 
-input {
+
+input, textarea {
+    background-color: white;
     border: none;
     padding: 10px;
-    margin: 10px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow:0px 0px 0px 2px rgb(44, 148, 148) inset;
+
 }
+
 
 label {
     font-size: 1.5rem;
+
+    font-weight: 50;
+    letter-spacing: 0.1em;
+    padding: 10px;
+
 }
 
 button {
+    z-index: 2;
     border: none;
     background-color: bisque;
     height: 40px;
     width: 100px;
+    padding: 10px;
+    border-radius: 2px;
+    font-family: 'Poiret One', cursive;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    box-shadow:0px 0px 0px 2px rgb(44, 148, 148);
+    -webkit-text-emphasis: filled circle rgb(44, 148, 148);
+    -webkit-text-emphasis-position: under right;
+}
+
+button:hover {
+    background-color: rgb(44, 148, 148);
+    -webkit-text-emphasis: filled circle white;
+
 }
 
 .container {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    position: relative;
+
     height: 100%;
     padding: 0;
     margin: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
   }
   
   .row {
@@ -65,6 +100,37 @@ button {
   }
   
   svg, use {
-    display: block;
+      margin: 0;
+      padding: 0;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
   }
 
+  .second-sheep {
+    margin: 0;
+    padding: 0;
+
+  position: fixed;
+  bottom: -30px;
+  right: 200px;
+  }
+
+label {
+    color: black;
+}
+
+.main-form {
+    z-index: 1;
+    border-radius: 3px;
+    padding: 30px;
+    background-color: bisque;
+}
+
+#search-name {
+    z-index: 3;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+}
