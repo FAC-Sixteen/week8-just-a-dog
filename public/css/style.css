@@ -63,13 +63,25 @@ label {
 }
 
 button {
+    z-index: 2;
     border: none;
     background-color: bisque;
-    height: 30px;
+    height: 40px;
     width: 100px;
+    padding: 10px;
     border-radius: 2px;
     font-family: 'Poiret One', cursive;
-    /* box-shadow:0px 0px 0px 2px rgb(44, 148, 148) inset; */
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    box-shadow:0px 0px 0px 2px rgb(44, 148, 148);
+    -webkit-text-emphasis: filled circle rgb(44, 148, 148);
+    -webkit-text-emphasis-position: under right;
+}
+
+button:hover {
+    background-color: rgb(44, 148, 148);
+    -webkit-text-emphasis: filled circle white;
+
 }
 
 .container {
@@ -108,7 +120,15 @@ label {
 }
 
 .main-form {
+    z-index: 1;
     border-radius: 3px;
     padding: 30px;
     background-color: bisque;
+}
+
+#search-name {
+    z-index: 3;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
 }
