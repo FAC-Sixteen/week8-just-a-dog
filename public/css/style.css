@@ -58,7 +58,7 @@ button, .dream_new_button {
     border: solid 2px rgb(44, 148, 148);
     background-color: bisque;
     height: 50px;
-    width: 100px;
+    width: 120px;
     padding: 10px;
     padding-bottom: 20px;
     border-radius: 2px;
@@ -71,6 +71,7 @@ button, .dream_new_button {
 
  
     transition: all 0.3s ease-in-out;
+    margin: 10px;
 
 }
 .dream_new_button:hover,
