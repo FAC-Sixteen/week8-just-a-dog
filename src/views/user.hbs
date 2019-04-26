@@ -3,10 +3,10 @@
     {{capitalise dreams.0.name}}'s dream diary
     </h2>
 {{/if}}
-
+<div class="diary_container">
 {{#each dreams}}
-    <div class=">
-        <ul>
+    <div class="dream_container">
+        <ul class="dream_list">
         <li>Date: {{date}}</li>
         <li>Description: {{description}}</li>
         <li>Keyword: {{keyword}}</li>
@@ -15,5 +15,6 @@
 
 {{/each}}
 
-<a href="/">Enter a new dream</a>
+<a class="dream_new_button" href="/">Enter a new dream</a>
 
+</div>
