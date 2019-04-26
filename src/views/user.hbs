@@ -1,10 +1,11 @@
+{{#if dreams}}
+    <h2>
+    {{capitalise dreams.0.name}}'s dream diary
+    </h2>
+{{/if}}
+
 {{#each dreams}}
-   <h2>
-    {{capitalise name}}'s dream diary
-</h2>
-
-
-    <div>
+    <div class=">
         <ul>
         <li>Date: {{date}}</li>
         <li>Description: {{description}}</li>

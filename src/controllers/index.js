@@ -28,7 +28,9 @@ router.get('/:user', (req, response) => {
         .status(404)
         .sendFile(path.join(__dirname, '..', '..', 'public', 'html', '404.html'))
       } else {
+                console.log(res.rows);
                 response.render('user', { dreams: res.rows })
+                
             }
 
     })
