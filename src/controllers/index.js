@@ -10,19 +10,27 @@ router.get('/', (req, res) => {
 })
 
 router.post('/submit', (req, res) => {
-    console.log(req.body);
-    postData(req.body.name, req.body.date, req.body.description, req.body.keyword);
+    postData(req.body.name.toLowerCase(), req.body.date, req.body.description, req.body.keyword);
     res.redirect(`/${req.body.name}`)
+})
+
+router.post('/search', (req, res) => {
+    res.redirect(`/${req.body.search}`)
 })
 
 router.get('/:user', (req, response) => {
   const username = req.url.split("/")[1];
-    // response.render('user')
-    getData(username, (err, res) => {
+
+    getData(username.toLowerCase(), (err, res) => {
       if (err) console.log(err);
-      console.log(res.rows);
-      // response.end(res.rows);
-      response.render('user', { dreams: res.rows })
+      if (res.rows.length == 0) {
+        response
+        .status(404)
+        .sendFile(path.join(__dirname, '..', '..', 'public', 'html', '404.html'))
+      } else {
+                response.render('user', { dreams: res.rows })
+            }
+
     })
 })
 
