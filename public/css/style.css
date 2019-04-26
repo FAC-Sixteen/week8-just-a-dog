@@ -73,7 +73,7 @@ button {
     font-family: 'Poiret One', cursive;
     letter-spacing: 0.2em;
     text-decoration: none;
-    box-shadow:0px 0px 0px 2px rgb(44, 148, 148);
+    /* box-shadow:0px 0px 0px 2px rgb(44, 148, 148); */
     -webkit-text-emphasis: filled circle rgb(44, 148, 148);
     -webkit-text-emphasis-position: under right;
 }
