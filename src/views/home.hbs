@@ -1,21 +1,23 @@
-  <div class="centre-items">
+<div class="centre-items">
   <h2>good morning, what's your dream?</h2>
 
 
   <form class="main-form" action="/submit" method="post">
-<label for="input-name">what's your name?</label><br>
-<input type="text" name="name" value="" id="input-name" required><br>
-<label for="input-date">when was your dream?</label><br>
-<input type="date" name="date" value="" id="input-date" required><br>
-<label for="input-description">describe your dream:</label><br>
-<textarea rows="4" name="description" value="" id="input-description" required></textarea><br>
-<label for="input-keyword">tag/keyword:</label><br>
-<input type="text" name="keyword" value="" id="input-keyword" required><br>
-<button type="submit">Submit</button>
+    <label for="input-name">what's your name?</label><br>
+    <input type="text" name="name" value="" id="input-name" required><br>
+    <label for="input-date">when was your dream?</label><br>
+    <input type="date" name="date" value="" id="input-date" required><br>
+    <label for="input-description">describe your dream:</label><br>
+    <textarea rows="4" name="description" value="" id="input-description" required></textarea><br>
+    <label for="input-keyword">tag/keyword:</label><br>
+    <input type="text" name="keyword" value="" id="input-keyword" required><br>
+    <button type="submit">Submit</button>
   </form>
 
-  <form action="/search" method="POST">
-<input type="text" name="search" value="" id="search-name" placeholder="search your dreams" aria-label="search for your dreams"required>
-<button type="submit">Submit</button>
+  <form class="name-search" action="/search" method="POST">
+    <label for="search-name" class="name-search__label">Search your dreams:</label>
+    <input type="text" name="search" value="" id="search-name" placeholder="enter your name"
+      aria-label="search for your dreams" required>
+    <button type="submit">Submit</button>
   </form>
-  </div>
+</div>
