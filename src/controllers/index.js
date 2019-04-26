@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 router.post('/submit', (req, res) => {
     console.log(req.body);
-    postData(req.body.name, req.body.date, req.body.description, req.body.keyword);
+    postData(req.body.name.toLowerCase(), req.body.date, req.body.description, req.body.keyword);
     res.redirect(`/${req.body.name}`)
 })
 
@@ -23,10 +23,9 @@ router.post('/search', (req, res) => {
 
 router.get('/:user', (req, response) => {
   const username = req.url.split("/")[1];
- 
-    getData(username, (err, res) => {
-      if (err) console.log(err);
 
+    getData(username.toLowerCase(), (err, res) => {
+      if (err) console.log(err);
       if (res.rows.length == 0) {
           console.log('hello wave')
         response
